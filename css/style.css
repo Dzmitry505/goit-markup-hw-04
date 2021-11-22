@@ -97,6 +97,18 @@ img {
   color: var(--first-color);
   background-color: var(--btn-color);
 }
+.nav-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.nav-smart {
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
+}
 .navigation-link {
   display: block;
   padding-top: 32px;
@@ -107,9 +119,11 @@ img {
   line-height: 1.14;
   color: var(--second-text-color);
 }
+
 .link-contacts-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contacts-link,
 .contacts-tel-link {
@@ -118,12 +132,24 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  align-items: center;
+  justify-content: center;
   color: var(--third-text-color);
 }
 
 /*-----------------------------------------------------------------------------------------герой-------------------------------------------------------*/
 .hero {
   background-color: var(--second-color);
+  background-image: linear-gradient(
+      rgba(38, 47, 148, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -160,9 +186,13 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--first-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   border: none;
+}
+.btn-hero:hover,
+.btn-filter:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*----------------------------------------------------------------------- Особенности------------------------------------------------------------------------ */
 .work {
