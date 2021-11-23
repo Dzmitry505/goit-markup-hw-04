@@ -123,17 +123,16 @@ img {
 .link-contacts-list {
   display: flex;
   margin-left: auto;
-  align-items: center;
 }
 .contacts-link,
 .contacts-tel-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  align-items: center;
-  justify-content: center;
   color: var(--third-text-color);
 }
 
@@ -141,7 +140,7 @@ img {
 .hero {
   background-color: var(--second-color);
   background-image: linear-gradient(
-      rgba(38, 47, 148, 0.4),
+      rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/hero.jpg);
@@ -200,6 +199,21 @@ img {
 }
 .spc-combo {
   width: 270px;
+}
+.spc-combo-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.antenna {
+  --antenna-color: black;
+  --antenna-accent-color: blue;
 }
 .spc-text-list .spc-combo + .spc-combo {
   margin-left: 30px;
