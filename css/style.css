@@ -16,6 +16,7 @@ p {
   --btn-port-color: #f5f4fa;
   --size-simple: 30px;
   --border-item-color: #eeeeee;
+  --icon-social-color: #afb1b8;
 }
 
 body {
@@ -212,8 +213,20 @@ img {
   margin-bottom: 30px;
 }
 .antenna {
-  --antenna-color: black;
-  --antenna-accent-color: blue;
+  --antenna-color: var(--second-text-color);
+  --antenna-accent-color: var(--btn-color);
+}
+.clock {
+  --clock-color: var(--second-text-color);
+  --clock-accent-color: var(--btn-color);
+}
+.diagramm {
+  --diagramm-color: var(--second-text-color);
+  --diagramm-accent-color: var(--btn-color);
+}
+.astronaut {
+  --astronaut-color: var(--second-text-color);
+  --astronaut-accent-color: var(--btn-color);
 }
 .spc-text-list .spc-combo + .spc-combo {
   margin-left: 30px;
@@ -271,8 +284,10 @@ img {
   color: var(--second-text-color);
 }
 .words {
+  align-items: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
+  text-align: center;
 }
 .team-name {
   font-weight: medium;
@@ -290,8 +305,38 @@ img {
 .team-list .team-info + .team-info {
   margin-left: 30px;
 }
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item {
+  width: 44px;
+  height: 44px;
+}
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: black;
+}
+.team-social-icon {
+  fill: var(--icon-social-color);
+}
+
 .work-direction {
   font-weight: normal;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
