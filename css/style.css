@@ -49,6 +49,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+a {
+  cursor: pointer;
+}
 .about-logo-link {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -293,7 +296,7 @@ img {
   font-weight: medium;
   font-size: 16px;
   line-height: 1.19;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
@@ -318,18 +321,28 @@ img {
   margin-left: 10px;
 }
 
-.team-social-link {
-  width: 44px;
-  height: 44px;
+.team-social-link,
+.footer-social-link {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .team-social-link:hover,
-.team-social-link:focus {
-  background-color: black;
+.team-social-link:focus,
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--btn-color);
 }
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon,
+.footer-social-link:hover .team-social-icon,
+.footer-social-link:focus .team-social-icon {
+  fill: var(--first-color);
+}
+
 .team-social-icon {
   fill: var(--icon-social-color);
 }
@@ -343,7 +356,49 @@ img {
   letter-spacing: 0.03em;
   color: var(--third-text-color);
 }
+/*----------------------ПОСТОЯННЫЕ КЛИЕНТЫ------*/
+.client-list {
+  display: flex;
+  justify-content: center;
+}
+.client-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item + .client-item {
+  margin-left: 30px;
+}
+.client-item:hover .client-link,
+.client-item:focus .client-link {
+  fill: var(--btn-color);
+  border-color: var(--btn-color);
+}
+.client-title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  fill: var(--icon-social-color);
+  border: 1px solid var(--icon-social-color);
+  border-radius: 4px;
+}
+
 /*----------------------------------------------------------------------- Подвал------------------------------------------------------------------------------ */
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 .about-contacts {
   background-color: var(--second-color);
 }
@@ -393,17 +448,40 @@ footer {
 .footer-list :not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-block {
+  max-width: 231px;
+  margin-right: 70px;
+}
+.social-block {
+  display: block;
+}
+.social-footer-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--first-color);
+}
+.footer-social-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-social-icon {
+  fill: var(--first-color);
+}
 /*-------------------------------------------------------------отдельно к портфолио----------------------------------------------------------------------*/
 .main-btn-filter {
   display: inline-block;
   font-weight: 500;
   font-family: inherit;
   font-size: 16px;
-  line-height: 2.17;
+  line-height: 1.63;
   padding: 6px 22px;
   cursor: pointer;
   background: var(--btn-port-color);
   text-align: center;
+  letter-spacing: 0.03em;
   border-radius: 5px;
   border: none;
 }
@@ -416,7 +494,7 @@ footer {
 }
 .main-btn-list {
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
@@ -455,9 +533,13 @@ footer {
   border: 1px solid var(--border-item-color);
   border-top: 0;
 }
-/*.item-project {
-  margin-right: 30px;
-  margin-bottom: 30px;
+.item-project {
+  cursor: pointer;
+}
+.item-project:hover,
+.item-project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*.item-project:nth-child(3n) {
   margin-right: 0;
