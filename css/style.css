@@ -254,7 +254,7 @@ a {
 .spc-text-list {
   display: flex;
 }
-/*---------------------------------------------------------------------- Чем мы занимаемся----------------------------------------------------------------- */
+/*------------------------ ------------------------ Чем мы занимаемся----------------------------------------------------------------- */
 .about-profession-list {
   margin: 0;
   display: flex;
@@ -311,6 +311,7 @@ a {
 .team-social-list {
   display: flex;
   justify-content: center;
+  fill: var(--icon-social-color);
 }
 
 .team-social-item {
@@ -319,6 +320,9 @@ a {
 }
 .team-social-item + .team-social-item {
   margin-left: 10px;
+}
+.team-social-link {
+  color: var(--icon-social-color);
 }
 
 .team-social-link,
@@ -344,7 +348,7 @@ a {
 }
 
 .team-social-icon {
-  fill: var(--icon-social-color);
+  fill: currentColor;
 }
 
 .work-direction {
